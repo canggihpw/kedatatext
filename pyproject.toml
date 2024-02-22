@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "kedatatext"
-version = "0.1.0"
+version = "0.2.0"
 homepage = "https://github.com/canggihpw/kedatatext"
 description = "Skeleton project created by Python Project Wizard (ppw)."
 authors = ["Canggih Puspo Wibowo <cangcappo@gmail.com>"]
@@ -13,8 +13,6 @@ classifiers=[
     'License :: OSI Approved :: MIT License',
     'Natural Language :: English',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
 ]
@@ -24,7 +22,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0"
+python = ">=3.10,<4.0"
 fire = "0.4.0"
 
 black  = { version = "^22.3.0", optional = true}

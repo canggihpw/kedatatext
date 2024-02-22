@@ -1,13 +1,13 @@
 """Console script for kedatatext."""
 
-import fire
+import fire  # pragma: no cover
 
 
-def hello() -> str:
+def hello() -> str:  # pragma: no cover
     return "kedatatext"
 
 
-def main() -> None:
+def main() -> None:  # pragma: no cover
     fire.Fire(hello)
 
 
