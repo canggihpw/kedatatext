@@ -8,12 +8,34 @@
 </a>
 
 <a href="https://github.com/canggihpw/kedatatext/actions">
-    <img src="https://github.com/canggihpw/kedatatext/actions/workflows/main.yml/badge.svg?branch=release" alt="CI Status">
+    <img src="https://github.com/canggihpw/kedatatext/actions/workflows/dev.yml/badge.svg" alt="dev CI Status">
+</a>
+
+<a href="https://github.com/canggihpw/kedatatext/actions">
+    <img src="https://github.com/canggihpw/kedatatext/actions/workflows/release.yml/badge.svg" alt="release CI Status">
 </a>
 
 <a href="https://canggihpw.github.io/kedatatext/">
     <img src="https://img.shields.io/website/https/canggihpw.github.io/kedatatext/index.html.svg?label=docs&down_message=unavailable&up_message=available" alt="Documentation Status">
 </a>
+
+<a href="https://codecov.io/gh/canggihpw/kedatatext" >
+    <img src="https://codecov.io/gh/canggihpw/kedatatext/graph/badge.svg?token=gQSMhgXOm0"/>
+</a>
+
+<a href="https://app.codacy.com/gh/canggihpw/kedatatext/dashboard" >
+    <img src="https://app.codacy.com/project/badge/Grade/2f7adf5b938c425fb85247b1efea0ac2"/>
+</a>
+
+<a href="https://pypi.python.org/pypi/kedatatext">
+    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/kedatatext">
+</a>
+
+<a href="https://github.com/canggihpw/kedatatext/tree/main/kedatatext">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/canggihpw/kedatatext">
+</a>
+
+
 
 </p>
 

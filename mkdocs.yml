@@ -7,7 +7,9 @@ nav:
   - home: index.md
   - installation: installation.md
   - usage: usage.md
-  - modules: api.md
+  - modules:
+    - preprocessing: api.md
+    - Api dua: api.md
   - contributing: contributing.md
   - authors: authors.md
   - history: history.md
@@ -32,9 +34,9 @@ theme:
     - navigation.instant
     - navigation.tabs.sticky
 markdown_extensions:
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.mark
@@ -51,7 +53,7 @@ markdown_extensions:
   - toc:
       baselevel: 2
       permalink: true
-      slugify: !!python/name:pymdownx.slugs.uslugify
+      # slugify: !!python/name:pymdownx.slugs.uslugify
   - meta
 plugins:
   - include-markdown
