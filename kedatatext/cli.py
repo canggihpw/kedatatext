@@ -3,14 +3,12 @@
 import fire
 
 
-def help() -> None:
-    print("kedatatext")
-    print("=" * len("kedatatext"))
-    print("Skeleton project created by Python Project Wizard (ppw)")
+def hello() -> str:
+    return "kedatatext"
 
 
 def main() -> None:
-    fire.Fire({"help": help})
+    fire.Fire(hello)
 
 
 if __name__ == "__main__":

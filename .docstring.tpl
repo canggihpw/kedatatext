@@ -33,3 +33,10 @@ Yields:
     {{descriptionPlaceholder}}
 {{/yields}}
 {{/yieldsExist}}
+
+{{#examplesExist}}
+Examples:
+{{#examples}}
+    {{descriptionPlaceholder}}
+{{/examples}}
+{{/examplesExist}}
