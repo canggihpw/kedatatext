@@ -1,8 +1,12 @@
 """Tests for `preprocess` package."""
+# pylint: disable=redefined-outer-name
+
+import pytest
 
 from kedatatext.preprocessing import CleaningParams, clean_sentences_indonesia
 
 
+@pytest.fixture
 def test_clean_sentence_indonesia():
     """Function to test the cleaning of texts using a list of texts and cleaning parameters."""
 
