@@ -3,89 +3,70 @@
 
 import pytest
 
-from kedatatext.preprocessing import (
-    CleaningParams,
-    clean_sentence_indonesia,
-    clean_sentences_indonesia,
-)
+from kedatatext.preprocessing import clean_sentence_indonesia, clean_sentences_indonesia
 
 
-@pytest.fixture
-def clean_params():
-    """Fixture to create a CleaningParams object."""
-    return CleaningParams()
-
-
-def test_clean_sentence_indonesia(clean_params):
+def test_clean_sentence_indonesia():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text)
     assert cleaned_text == "lihat"
 
 
-def test_clean_sentence_indonesia_no_stemming(clean_params):
+def test_clean_sentence_indonesia_no_stemming():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.use_stemming = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, use_stemming=False)
     assert cleaned_text == "lihat"
 
 
-def test_clean_sentence_indonesia_no_remove_stopwords(clean_params):
+def test_clean_sentence_indonesia_no_remove_stopwords():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_stopwords = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_stopwords=False)
     assert cleaned_text == "mereka lihat ini"
 
 
-def test_clean_sentence_indonesia_no_remove_retweet(clean_params):
+def test_clean_sentence_indonesia_no_remove_retweet():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_retweet = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_retweet=False)
     assert cleaned_text == "rt lihat"
 
 
-def test_clean_sentence_indonesia_no_remove_urls(clean_params):
+def test_clean_sentence_indonesia_no_remove_urls():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_urls = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_urls=False)
     assert cleaned_text == "lihat httpsexamplecom"
 
 
-def test_clean_sentence_indonesia_no_remove_mentions(clean_params):
+def test_clean_sentence_indonesia_no_remove_mentions():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_mentions = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_mentions=False)
     assert cleaned_text == "canggih lihat"
 
 
-def test_clean_sentence_indonesia_no_remove_hashtags(clean_params):
+def test_clean_sentence_indonesia_no_remove_hashtags():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_hashtags = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_hashtags=False)
     assert cleaned_text == "lihat"
 
 
-def test_clean_sentence_indonesia_no_remove_numbers(clean_params):
+def test_clean_sentence_indonesia_no_remove_numbers():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_numbers = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_numbers=False)
     assert cleaned_text == "lihat"
 
 
-def test_clean_sentence_indonesia_no_remove_extra_ws(clean_params):
+def test_clean_sentence_indonesia_no_remove_extra_ws():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_extra_whitespace = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_extra_whitespace=False)
     assert cleaned_text == "lihat"
 
 
-def test_clean_sentence_indonesia_no_remove_punkt(clean_params):
+def test_clean_sentence_indonesia_no_remove_punkt():
     text = "RT @canggih: Mereka lihat ini: https://example.com"
-    clean_params.remove_punctuation = False
-    cleaned_text = clean_sentence_indonesia(text, clean_params)
+    cleaned_text = clean_sentence_indonesia(text, remove_punctuation=False)
     assert cleaned_text == "lihat"
 
 
-def test_clean_sentences_indonesia(clean_params):
+def test_clean_sentences_indonesia():
     text = ["RT @canggih: Mereka lihat ini: https://example.com"]
-    cleaned_text = clean_sentences_indonesia(text, clean_params)
+    cleaned_text = clean_sentences_indonesia(text)
     assert cleaned_text == ["lihat"]
